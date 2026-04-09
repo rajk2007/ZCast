@@ -103,7 +103,7 @@ class SettingsProviders : BasePreferenceFragmentCompat() {
                     )
                 }
                 DataStoreHelper.currentHomePage = null
-                //(context ?: NovaCastApp.context)?.let { ctx -> app.initClient(ctx) }
+                //(context ?: CloudStreamApp.context)?.let { ctx -> app.initClient(ctx) }
             }
 
             return@setOnPreferenceClickListener true

@@ -1,78 +1,78 @@
 package com.lagradost.cloudstream3
 
 /**
- * Deprecated alias for NovaCastApp for backwards compatibility with plugins.
- * Use NovaCastApp instead.
+ * Deprecated alias for CloudStreamApp for backwards compatibility with plugins.
+ * Use CloudStreamApp instead.
  */
 @Deprecated(
-    message = "AcraApplication is deprecated, use NovaCastApp instead",
-    replaceWith = ReplaceWith("com.lagradost.cloudstream3.NovaCastApp"),
+    message = "AcraApplication is deprecated, use CloudStreamApp instead",
+    replaceWith = ReplaceWith("com.lagradost.cloudstream3.CloudStreamApp"),
     level = DeprecationLevel.WARNING
 )
 class AcraApplication {
 	companion object {
 
 		@Deprecated(
-		    message = "AcraApplication is deprecated, use NovaCastApp instead",
-		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.NovaCastApp.context"),
+		    message = "AcraApplication is deprecated, use CloudStreamApp instead",
+		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.CloudStreamApp.context"),
 		    level = DeprecationLevel.WARNING
 		)
-		val context get() = NovaCastApp.context
+		val context get() = CloudStreamApp.context
 
 		@Deprecated(
-		    message = "AcraApplication is deprecated, use NovaCastApp instead",
-		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.NovaCastApp.removeKeys(folder)"),
+		    message = "AcraApplication is deprecated, use CloudStreamApp instead",
+		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.CloudStreamApp.removeKeys(folder)"),
 		    level = DeprecationLevel.WARNING
 		)
 		fun removeKeys(folder: String): Int? =
-		    NovaCastApp.removeKeys(folder)
+		    CloudStreamApp.removeKeys(folder)
 
 		@Deprecated(
-		    message = "AcraApplication is deprecated, use NovaCastApp instead",
-		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.NovaCastApp.setKey(path, value)"),
+		    message = "AcraApplication is deprecated, use CloudStreamApp instead",
+		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.CloudStreamApp.setKey(path, value)"),
 		    level = DeprecationLevel.WARNING
 		)
 		fun <T> setKey(path: String, value: T) =
-			NovaCastApp.setKey(path, value)
+			CloudStreamApp.setKey(path, value)
 
 		@Deprecated(
-		    message = "AcraApplication is deprecated, use NovaCastApp instead",
-		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.NovaCastApp.setKey(folder, path, value)"),
+		    message = "AcraApplication is deprecated, use CloudStreamApp instead",
+		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.CloudStreamApp.setKey(folder, path, value)"),
 		    level = DeprecationLevel.WARNING
 		)
 		fun <T> setKey(folder: String, path: String, value: T) =
-			NovaCastApp.setKey(folder, path, value)
+			CloudStreamApp.setKey(folder, path, value)
 
 		@Deprecated(
-		    message = "AcraApplication is deprecated, use NovaCastApp instead",
-		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.NovaCastApp.getKey(path, defVal)"),
+		    message = "AcraApplication is deprecated, use CloudStreamApp instead",
+		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.CloudStreamApp.getKey(path, defVal)"),
 		    level = DeprecationLevel.WARNING
 		)
 		inline fun <reified T : Any> getKey(path: String, defVal: T?): T? =
-			NovaCastApp.getKey(path, defVal)
+			CloudStreamApp.getKey(path, defVal)
 
 		@Deprecated(
-		    message = "AcraApplication is deprecated, use NovaCastApp instead",
-		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.NovaCastApp.getKey(path)"),
+		    message = "AcraApplication is deprecated, use CloudStreamApp instead",
+		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.CloudStreamApp.getKey(path)"),
 		    level = DeprecationLevel.WARNING
 		)
 		inline fun <reified T : Any> getKey(path: String): T? =
-			NovaCastApp.getKey(path)
+			CloudStreamApp.getKey(path)
 
 		@Deprecated(
-		    message = "AcraApplication is deprecated, use NovaCastApp instead",
-		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.NovaCastApp.getKey(folder, path)"),
+		    message = "AcraApplication is deprecated, use CloudStreamApp instead",
+		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.CloudStreamApp.getKey(folder, path)"),
 		    level = DeprecationLevel.WARNING
 		)
 		inline fun <reified T : Any> getKey(folder: String, path: String): T? =
-		    NovaCastApp.getKey(folder, path)
+		    CloudStreamApp.getKey(folder, path)
 
 		@Deprecated(
-		    message = "AcraApplication is deprecated, use NovaCastApp instead",
-		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.NovaCastApp.getKey(folder, path, defVal)"),
+		    message = "AcraApplication is deprecated, use CloudStreamApp instead",
+		    replaceWith = ReplaceWith("com.lagradost.cloudstream3.CloudStreamApp.getKey(folder, path, defVal)"),
 		    level = DeprecationLevel.WARNING
 		)
 		inline fun <reified T : Any> getKey(folder: String, path: String, defVal: T?): T? =
-			NovaCastApp.getKey(folder, path, defVal)
+			CloudStreamApp.getKey(folder, path, defVal)
 	}
 }

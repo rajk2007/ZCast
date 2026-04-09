@@ -11,9 +11,9 @@ import androidx.core.os.ConfigurationCompat
 import androidx.preference.PreferenceManager
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.APIHolder.allProviders
-import com.lagradost.cloudstream3.NovaCastApp
-import com.lagradost.cloudstream3.NovaCastApp.Companion.getKey
-import com.lagradost.cloudstream3.NovaCastApp.Companion.setKey
+import com.lagradost.cloudstream3.CloudStreamApp
+import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKey
+import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
 import com.lagradost.cloudstream3.CommonActivity
 import com.lagradost.cloudstream3.CommonActivity.showToast
 import com.lagradost.cloudstream3.MainActivity
@@ -156,7 +156,7 @@ class SettingsGeneral : BasePreferenceFragmentCompat() {
     )
 
     private val pathPicker = getChooseFolderLauncher { uri, path ->
-        val context = context ?: NovaCastApp.context ?: return@getChooseFolderLauncher
+        val context = context ?: CloudStreamApp.context ?: return@getChooseFolderLauncher
         (path ?: uri.toString()).let {
             PreferenceManager.getDefaultSharedPreferences(context).edit {
                 putString(getString(R.string.download_path_key), uri.toString())
@@ -321,7 +321,7 @@ class SettingsGeneral : BasePreferenceFragmentCompat() {
                 true,
                 {}) {
                 settingsManager.edit { putInt(getString(R.string.dns_pref), prefValues[it]) }
-                (context ?: NovaCastApp.context)?.let { ctx -> app.initClient(ctx) }
+                (context ?: CloudStreamApp.context)?.let { ctx -> app.initClient(ctx) }
             }
             return@setOnPreferenceClickListener true
         }

@@ -1,6 +1,6 @@
 package com.lagradost.cloudstream3.syncproviders
 
-import com.lagradost.cloudstream3.NovaCastApp.Companion.openBrowser
+import com.lagradost.cloudstream3.CloudStreamApp.Companion.openBrowser
 import com.lagradost.cloudstream3.CommonActivity.showToast
 import com.lagradost.cloudstream3.ErrorLoadingException
 import com.lagradost.cloudstream3.R

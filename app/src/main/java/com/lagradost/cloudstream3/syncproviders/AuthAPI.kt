@@ -5,9 +5,9 @@ import androidx.annotation.WorkerThread
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.lagradost.cloudstream3.APIHolder.unixTime
 import com.lagradost.cloudstream3.ActorData
-import com.lagradost.cloudstream3.NovaCastApp.Companion.getKey
-import com.lagradost.cloudstream3.NovaCastApp.Companion.openBrowser
-import com.lagradost.cloudstream3.NovaCastApp.Companion.setKey
+import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKey
+import com.lagradost.cloudstream3.CloudStreamApp.Companion.openBrowser
+import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
 import com.lagradost.cloudstream3.CommonActivity.showToast
 import com.lagradost.cloudstream3.ErrorLoadingException
 import com.lagradost.cloudstream3.LoadResponse
