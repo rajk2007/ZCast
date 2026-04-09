@@ -7,7 +7,7 @@ import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKey
+import com.lagradost.cloudstream3.NovaCastApp.Companion.getKey
 import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.databinding.DownloadQueueItemBinding
 import com.lagradost.cloudstream3.ui.BaseAdapter

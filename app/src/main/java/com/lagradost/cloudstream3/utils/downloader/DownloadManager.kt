@@ -21,10 +21,10 @@ import androidx.core.net.toUri
 import androidx.preference.PreferenceManager
 import com.lagradost.cloudstream3.APIHolder.getApiFromNameNull
 import com.lagradost.cloudstream3.BuildConfig
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKey
+import com.lagradost.cloudstream3.NovaCastApp.Companion.getKey
 import com.lagradost.cloudstream3.CommonActivity.showToast
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.removeKey
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
+import com.lagradost.cloudstream3.NovaCastApp.Companion.removeKey
+import com.lagradost.cloudstream3.NovaCastApp.Companion.setKey
 import com.lagradost.cloudstream3.IDownloadableMinimum
 import com.lagradost.cloudstream3.MainActivity
 import com.lagradost.cloudstream3.R

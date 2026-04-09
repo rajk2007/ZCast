@@ -2,9 +2,9 @@ package com.lagradost.cloudstream3.plugins
 
 import android.content.Context
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.context
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKey
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
+import com.lagradost.cloudstream3.NovaCastApp.Companion.context
+import com.lagradost.cloudstream3.NovaCastApp.Companion.getKey
+import com.lagradost.cloudstream3.NovaCastApp.Companion.setKey
 import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.amap
 import com.lagradost.cloudstream3.app

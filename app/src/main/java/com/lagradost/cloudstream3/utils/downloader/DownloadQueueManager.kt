@@ -3,11 +3,11 @@ package com.lagradost.cloudstream3.utils.downloader
 import android.content.Context
 import android.util.Log
 import androidx.core.content.ContextCompat
-import com.lagradost.cloudstream3.CloudStreamApp
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKey
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.getKeys
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.removeKeys
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
+import com.lagradost.cloudstream3.NovaCastApp
+import com.lagradost.cloudstream3.NovaCastApp.Companion.getKey
+import com.lagradost.cloudstream3.NovaCastApp.Companion.getKeys
+import com.lagradost.cloudstream3.NovaCastApp.Companion.removeKeys
+import com.lagradost.cloudstream3.NovaCastApp.Companion.setKey
 import com.lagradost.cloudstream3.MainActivity.Companion.lastError
 import com.lagradost.cloudstream3.mvvm.safe
 import com.lagradost.cloudstream3.plugins.PluginManager
@@ -223,7 +223,7 @@ object DownloadQueueManager {
 
     /** Add a new object to the queue. Will not queue completed downloads or current downloads. */
     fun addToQueue(downloadQueueWrapper: DownloadQueueWrapper) = safe {
-        val context = CloudStreamApp.context ?: return@safe
+        val context = NovaCastApp.context ?: return@safe
         val fileInfo = getDownloadFileInfo(context, downloadQueueWrapper.id)
         val isComplete = fileInfo != null &&
                 // Assure no division by 0

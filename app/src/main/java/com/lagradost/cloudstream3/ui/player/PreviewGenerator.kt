@@ -9,7 +9,7 @@ import android.util.Log
 import androidx.annotation.WorkerThread
 import androidx.core.graphics.scale
 import androidx.preference.PreferenceManager
-import com.lagradost.cloudstream3.CloudStreamApp
+import com.lagradost.cloudstream3.NovaCastApp
 import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.mvvm.logError
 import com.lagradost.cloudstream3.ui.settings.Globals.TV
@@ -65,7 +65,7 @@ interface IPreviewGenerator {
 
     companion object {
         fun new(): IPreviewGenerator {
-            val userDisabled = CloudStreamApp.context?.let { ctx ->
+            val userDisabled = NovaCastApp.context?.let { ctx ->
                 PreferenceManager.getDefaultSharedPreferences(ctx)?.getBoolean(
                     ctx.getString(R.string.preview_seekbar_key), true
                 ) == false

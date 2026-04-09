@@ -46,8 +46,8 @@ import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lagradost.cloudstream3.APIHolder.getApiFromNameNull
-import com.lagradost.cloudstream3.CloudStreamApp
-import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
+import com.lagradost.cloudstream3.NovaCastApp
+import com.lagradost.cloudstream3.NovaCastApp.Companion.setKey
 import com.lagradost.cloudstream3.CommonActivity.showToast
 import com.lagradost.cloudstream3.LoadResponse
 import com.lagradost.cloudstream3.LoadResponse.Companion.getAniListId
@@ -910,7 +910,7 @@ class GeneratorPlayer : FullScreenPlayer() {
             safe {
                 // It lies, it can be null if file manager quits.
                 if (uri == null) return@safe
-                val ctx = context ?: CloudStreamApp.context ?: return@safe
+                val ctx = context ?: NovaCastApp.context ?: return@safe
                 // RW perms for the path
                 ctx.contentResolver.takePersistableUriPermission(
                     uri,

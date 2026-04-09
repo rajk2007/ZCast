@@ -67,7 +67,7 @@ class ExceptionHandler(
     }
 }
 
-class CloudStreamApp : Application(), SingletonImageLoader.Factory {
+class NovaCastApp : Application(), SingletonImageLoader.Factory {
 
     override fun onCreate() {
         super.onCreate()
