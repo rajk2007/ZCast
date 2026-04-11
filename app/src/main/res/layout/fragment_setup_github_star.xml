@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@android:color/white">
 
     <!-- App Icon -->
     <ImageView
@@ -25,7 +26,7 @@
         android:textStyle="bold"
         android:layout_marginBottom="16dp"
         android:gravity="center"
-        android:textColor="?attr/textColorPrimary" />
+        android:textColor="@android:color/black" />
 
     <!-- Subtitle -->
     <TextView
@@ -36,7 +37,7 @@
         android:textSize="16sp"
         android:layout_marginBottom="48dp"
         android:gravity="center"
-        android:textColor="?attr/textColorSecondary" />
+        android:textColor="@android:color/darker_gray" />
 
     <Space
         android:layout_width="match_parent"
@@ -50,7 +51,8 @@
         android:layout_height="wrap_content"
         android:text="⭐ Star on GitHub"
         android:textSize="16sp"
-        android:layout_marginBottom="12dp" />
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@android:color/holo_blue_dark" />
 
     <!-- Secondary Button: Maybe Later -->
     <com.google.android.material.button.MaterialButton
@@ -59,6 +61,7 @@
         android:layout_height="wrap_content"
         android:text="Maybe Later"
         android:textSize="16sp"
+        android:textColor="@android:color/black"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
 
 </LinearLayout>
