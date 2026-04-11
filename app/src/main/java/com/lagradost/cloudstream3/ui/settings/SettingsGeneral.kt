@@ -27,7 +27,7 @@ import com.lagradost.cloudstream3.network.initClient
 import com.lagradost.cloudstream3.ui.BasePreferenceFragmentCompat
 import com.lagradost.cloudstream3.ui.settings.Globals.EMULATOR
 import com.lagradost.cloudstream3.ui.settings.Globals.TV
-import com.lagradost.cloudstream3.ui.settings.Globals.beneneCount
+
 import com.lagradost.cloudstream3.ui.settings.SettingsFragment.Companion.getPref
 import com.lagradost.cloudstream3.ui.settings.SettingsFragment.Companion.hideOn
 import com.lagradost.cloudstream3.ui.settings.SettingsFragment.Companion.setPaddingBottom
@@ -42,7 +42,7 @@ import com.lagradost.cloudstream3.utils.SingleSelectionHelper.showMultiDialog
 import com.lagradost.cloudstream3.utils.SubtitleHelper
 import com.lagradost.cloudstream3.utils.UIHelper.dismissSafe
 import com.lagradost.cloudstream3.utils.UIHelper.hideKeyboard
-import com.lagradost.cloudstream3.utils.UIHelper.navigate
+
 import com.lagradost.cloudstream3.utils.USER_PROVIDER_API
 import com.lagradost.cloudstream3.utils.downloader.DownloadFileManagement
 import com.lagradost.cloudstream3.utils.downloader.DownloadFileManagement.getBasePath
@@ -390,39 +390,6 @@ class SettingsGeneral : BasePreferenceFragmentCompat() {
             return@setOnPreferenceClickListener true
         }
 
-        try {
-            beneneCount =
-                settingsManager.getInt(getString(R.string.benene_count), 0)
-            getPref(R.string.benene_count)?.let { pref ->
-                pref.summary =
-                    if (beneneCount <= 0) getString(R.string.benene_count_text_none) else getString(
-                        R.string.benene_count_text
-                    ).format(
-                        beneneCount
-                    )
 
-                pref.setOnPreferenceClickListener {
-                    try {
-                        beneneCount++
-                        if (beneneCount%20 == 0) {
-                            activity?.navigate(R.id.action_navigation_settings_general_to_easterEggMonkeFragment)
-                        }
-                        settingsManager.edit {
-                            putInt(
-                                getString(R.string.benene_count),
-                                beneneCount
-                            )
-                        }
-                        it.summary = getString(R.string.benene_count_text).format(beneneCount)
-                    } catch (e: Exception) {
-                        logError(e)
-                    }
-
-                    return@setOnPreferenceClickListener true
-                }
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
     }
 }
