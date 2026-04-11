@@ -80,22 +80,26 @@ class SetupFragmentExtensions : BaseFragment<FragmentSetupExtensionsBinding>(
                 prevBtt.isVisible = isSetup
 
                 nextBtt.setOnClickListener {
-                    // Continue setup
-                    if (isSetup)
+                    // Continue setup - skip language screen entirely
+                    if (isSetup) {
+                        // Check if any available languages for providers
                         if (
-                        // If any available languages
                             synchronized(apis) { apis.distinctBy { it.lang }.size > 1 }
                         ) {
+                            // If multiple languages available, show provider language selection
                             findNavController().navigate(R.id.action_navigation_setup_extensions_to_navigation_setup_provider_languages)
                         } else {
+                            // If only one language, skip to media selection
                             findNavController().navigate(R.id.action_navigation_setup_extensions_to_navigation_setup_media)
                         }
-                    else
+                    } else {
+                        // Not in setup mode, go to home
                         findNavController().navigate(R.id.navigation_home)
+                    }
                 }
 
                 prevBtt.setOnClickListener {
-                    findNavController().navigate(R.id.navigation_setup_language)
+                    findNavController().popBackStack()
                 }
             }
         }
