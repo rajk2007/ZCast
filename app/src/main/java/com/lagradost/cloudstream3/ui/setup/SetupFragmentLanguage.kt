@@ -26,6 +26,12 @@ class SetupFragmentLanguage : BaseFragment<FragmentSetupLanguageBinding>(
     BaseFragment.BindingCreator.Inflate(FragmentSetupLanguageBinding::inflate)
 ) {
 
+    override fun onViewCreated(view: View, savedInstanceState: android.os.Bundle?) {
+        findNavController().navigate(R.id.action_navigation_setup_language_to_navigation_setup_extensions)
+        return
+        super.onViewCreated(view, savedInstanceState)
+    }
+
     override fun fixLayout(view: View) {
         fixSystemBarsPadding(view)
     }
