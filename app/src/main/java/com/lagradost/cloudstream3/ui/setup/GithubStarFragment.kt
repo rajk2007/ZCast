@@ -57,7 +57,7 @@ class GithubStarFragment : BaseFragment<FragmentSetupGithubStarBinding>(
 
                 // Maybe Later button - skip to SetupLayout (final setup step)
                 skipButton.setOnClickListener {
-                    findNavController().navigate(R.id.navigation_setup_github_star_to_navigation_setup_layout)
+                    findNavController().navigate(R.id.action_navigation_setup_github_star_to_navigation_setup_layout)
                 }
             }
         }
