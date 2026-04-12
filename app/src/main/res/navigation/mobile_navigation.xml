@@ -587,7 +587,8 @@
             app:popExitAnim="@anim/exit_anim" />
     </fragment>
 
-    <fragment
+    <!-- Removed language screen -->
+    <!-- <fragment
         android:id="@+id/navigation_setup_language"
         android:name="com.lagradost.cloudstream3.ui.setup.SetupFragmentLanguage"
         android:layout_height="match_parent"
@@ -603,7 +604,7 @@
             app:exitAnim="@anim/exit_anim"
             app:popEnterAnim="@anim/enter_anim"
             app:popExitAnim="@anim/exit_anim" />
-    </fragment>
+    </fragment> -->
 
     <action
         android:id="@+id/action_navigation_global_to_navigation_setup_extensions"
