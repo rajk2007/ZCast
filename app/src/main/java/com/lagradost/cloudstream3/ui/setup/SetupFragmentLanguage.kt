@@ -27,9 +27,8 @@ class SetupFragmentLanguage : BaseFragment<FragmentSetupLanguageBinding>(
 ) {
 
     override fun onViewCreated(view: View, savedInstanceState: android.os.Bundle?) {
-        findNavController().navigate(R.id.action_navigation_setup_language_to_navigation_setup_extensions)
-        return
         super.onViewCreated(view, savedInstanceState)
+        binding.nextButton.performClick()
     }
 
     override fun fixLayout(view: View) {
@@ -81,7 +80,7 @@ class SetupFragmentLanguage : BaseFragment<FragmentSetupLanguageBinding>(
                         && PluginManager.getPluginsLocal().isEmpty()
                     //&& PREBUILT_REPOSITORIES.isNotEmpty()
                     ) R.id.action_navigation_global_to_navigation_setup_extensions
-                    else R.id.action_navigation_setup_language_to_navigation_setup_provider_languages
+                    else R.id.action_navigation_setup_language_to_navigation_setup_provider
 
                     findNavController().navigate(
                         nextDestination,
