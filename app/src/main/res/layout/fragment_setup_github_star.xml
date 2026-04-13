@@ -54,6 +54,13 @@
         android:layout_marginBottom="12dp"
         android:backgroundTint="@android:color/holo_blue_dark" />
 
+    <Button
+        android:id="@+id/telegramButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💬 Join our Telegram"
+        android:layout_marginTop="8dp" />
+
     <!-- Secondary Button: Maybe Later -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/skipButton"

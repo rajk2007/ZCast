@@ -55,6 +55,11 @@ class GithubStarFragment : BaseFragment<FragmentSetupGithubStarBinding>(
                     }
                 }
 
+                binding.telegramButton.setOnClickListener {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/novacast_official"))
+                    startActivity(intent)
+                }
+
                 // Maybe Later button - skip to SetupLayout (final setup step)
                 skipButton.setOnClickListener {
                     findNavController().navigate(R.id.action_navigation_setup_github_star_to_navigation_setup_layout)
