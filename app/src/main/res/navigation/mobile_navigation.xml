@@ -597,6 +597,9 @@
         app:popExitAnim="@anim/exit_anim"
         tools:layout="@layout/fragment_setup_language">
         <action
+            android:id="@+id/action_navigation_setup_language_to_navigation_setup_extensions"
+            app:destination="@id/navigation_setup_extensions" />
+        <action
             android:id="@+id/action_navigation_setup_language_to_navigation_setup_provider_languages"
             app:destination="@id/navigation_setup_provider_languages"
             app:enterAnim="@anim/enter_anim"

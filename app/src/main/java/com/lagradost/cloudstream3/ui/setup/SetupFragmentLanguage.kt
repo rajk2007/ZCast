@@ -12,7 +12,6 @@ import com.lagradost.cloudstream3.CloudStreamApp.Companion.setKey
 import com.lagradost.cloudstream3.CommonActivity
 import com.lagradost.cloudstream3.databinding.FragmentSetupLanguageBinding
 import com.lagradost.cloudstream3.mvvm.safe
-import com.lagradost.cloudstream3.plugins.PluginManager
 import com.lagradost.cloudstream3.R
 import com.lagradost.cloudstream3.ui.BaseFragment
 import com.lagradost.cloudstream3.ui.settings.appLanguages
@@ -25,11 +24,6 @@ const val HAS_DONE_SETUP_KEY = "HAS_DONE_SETUP"
 class SetupFragmentLanguage : BaseFragment<FragmentSetupLanguageBinding>(
     BaseFragment.BindingCreator.Inflate(FragmentSetupLanguageBinding::inflate)
 ) {
-
-    override fun onViewCreated(view: View, savedInstanceState: android.os.Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.nextButton.performClick()
-    }
 
     override fun fixLayout(view: View) {
         fixSystemBarsPadding(view)
@@ -73,21 +67,9 @@ class SetupFragmentLanguage : BaseFragment<FragmentSetupLanguageBinding>(
                     }
                 }
 
-                // Auto-skip language screen
                 findNavController().navigate(R.id.action_navigation_setup_language_to_navigation_setup_extensions)
-                nextBtt.setOnClickListener {
-                    // If no plugins go to plugins page
-                    val nextDestination = if (
-                        PluginManager.getPluginsOnline().isEmpty()
-                        && PluginManager.getPluginsLocal().isEmpty()
-                    //&& PREBUILT_REPOSITORIES.isNotEmpty()
-                    ) R.id.action_navigation_global_to_navigation_setup_extensions
-                    else R.id.action_navigation_setup_language_to_navigation_setup_provider
-
-                    findNavController().navigate(
-                        nextDestination,
-                        SetupFragmentExtensions.newInstance(true)
-                    )
+                binding.confirmButton.setOnClickListener {
+                    findNavController().navigate(R.id.action_navigation_setup_language_to_navigation_setup_provider_languages)
                 }
 
                 skipBtt.setOnClickListener {
