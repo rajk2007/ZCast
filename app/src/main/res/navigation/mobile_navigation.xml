@@ -681,7 +681,7 @@
             app:popEnterAnim="@anim/enter_anim"
             app:popExitAnim="@anim/exit_anim" />
         <action
-            android:id="@+id/action_navigation_setup_media_to_navigation_setup_github_star"
+            android:id="@+id/navigation_setup_media_to_navigation_setup_github_star"
             app:destination="@id/navigation_setup_github_star" />
     </fragment>
 
