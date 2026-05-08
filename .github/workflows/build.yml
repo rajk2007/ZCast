@@ -1,4 +1,4 @@
-name: Build NovaCast APK
+name: Build ZCast APK
 on:
   push:
     branches: [ main, master ]
@@ -20,5 +20,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: NovaCast-debug
+          name: ZCast-debug
           path: app/build/outputs/apk/**/debug/*.apk
